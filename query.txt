@@ -1,0 +1,133 @@
+CREATE TABLE S2 (
+    Sr_no INT(10)  ,
+    Roll_no INT auto_increment  PRIMARY KEY,
+    Name VARCHAR(100),
+    Batch VARCHAR(10)
+);
+
+alter table S2 auto_increment=71;
+
+INSERT INTO S2 (Sr_no, Name, Batch) VALUES
+    (1,'LALLA LAVESH CHANDER','S21'),
+    (2,'LULLA MANISH NARESH','S21'),
+    (3,'MAKHIJA AYUSH MANOJ','S21'),
+    (4,'MANDHANI ROSHNI SANTOSH','S21'),
+    (5,'MANNUR PRADYUMNA TIRUMAL','S21'),
+    (6,'MARRI VAMSHI ASHOK','S21'),
+    (7,'MAURYA ARYAN RAMSAMUJH','S21'),
+    (8,'MENGHANI MEGH NARESH','S21'),
+    (9,'MIHANI SANIYA MAHESH','S21'),
+    (10,'MISHRA HARSH RAVINDRA','S21'),
+    (11,'MORE ANIKET PRAKASH','S21'),
+    (12,'MORE SALONI KIRAN','S21'),
+    (13,'MORPANA MEET JITENDRA','S21'),
+    (14,'MOTWANI TARUN KANAYA','S21'),
+    (15,'NAIK MAITHILI RAJESH','S21'),
+    (16,'NAIK ROHAN RAVINDRA','S21'),
+    (17,'NARSINGHANI MAHEK GIRISH','S21'),
+    (18,'NARWANI NIKHIL BHUPESH','S21'),
+    (19,'NEMADE KUNAL GAJANAN','S21'),
+    (20,'PAI VIGNESH SANDIP','S21'),
+    (21,'PAL MAYUSH HARESH','S21'),
+    (22,'PANDEY SUDHANSHU PARASHURAM','S21'),
+    (23,'PARIHAR PANKAJ JAGDISH','S21'),
+    (24,'PATIL ARYAA SUJIT','S21'),
+    (25,'PATIL PRATHAM PRASHANT','S22'),
+    (26,'PAWASKAR OM HEMANT','S22'),
+    (27,'PIRWANI MIHIR JEETENDRA','S22'),
+    (28,'PUNJABI KHUSHI VINOD','S22'),
+    (29,'PUNJABI NIDHI RANJIT','S22'),
+    (30,'QURESHI KHALID IMTIYAZ','S22'),
+    (31,'RAGHATATE SARVESH PRAMOD','S22'),
+    (32,'RAJPAL NAMAN MANOJ','S22'),
+    (33,'RAJPUT DIGVIJAYSINGHJAYDEEPSINGH','S22'),
+    (34,'RAMCHANDANI KRISHNA HEMANT','S22'),
+    (35,'RASAL SAHIL RAJENDRA','S22'),
+    (36,'RAUL SANCHIT TUSHAR','S22'),
+    (37,'RIZWANI KHUSHI HARISH','S22'),
+    (38,'RUPCHANDANI MEHUL RAJESH','S22'),
+    (39,'SAID SAKSHI SHANKAR','S22'),
+    (40,'SHAH TRISHA NIRAV','S22'),
+    (41,'SHARMA DHRUV DEEPAK','S22'),
+    (42,'SHARMA KANISHKA ASHOK','S22'),
+    (43,'SHIGWAN PUNAV SANJAY','S22'),
+    (44,'SHIMPI AADITYA SATISH','S22'),
+    (45,'SINGHAL SHIVAM PRADEEP','S22'),
+    (46,'SONI DARSHAN SATISH','S22'),
+    (47,'TANDURE SUJAL SUJEET','S22'),
+    (48,'THAKRANI RISHABH MAHESH','S22'),
+    (49,'THAKUR HARSH','S23'),
+    (50,'TIWARI AYUSH ANUJ','S23'),
+    (51,'UPADHYAY YUVRAJ PRALHAD','S23'),
+    (52,'VAIDYA SAKSHI SANJAY','S23'),
+    (53,'VAITY MEET JITENDRA','S23'),
+    (54,'VARMA MAHIMA ANIL','S23'),
+    (55,'VAZIRANI BHUMIKA KAMLESH','S23'),
+    (56,'VISHE PRATIK PRAKASH','S23'),
+    (57,'YADAV ATHARVA ASHOK','S23'),
+    (58,'YELAVE SIMRAN DILIP','S23'),
+    (59,'AHUJA AKSHAY GYAN','S23'),
+    (60,'AMBAVKAR AASTHA NITIN','S23'),
+    (61,'BHAVNANI DARSH HARESH','S23'),
+    (62,'DULANI AYUSH RAJESH','S23'),
+    (63,'GHIND .JATTN PARMANAND','S23'),
+    (64,'GUPTA ANSH RAMPAT','S23'),
+    (65,'KUKREJA HONEY RAMESHLAL','S23'),
+    (66,'KUMAWAT KHUSHI NARAYANLAL','S23'),
+    (67,'MANDLIK SIDDHANT GANESH','S23'),
+    (68,'MlSHRA ADARSH KRISHNAMOHAN','S23'),
+    (69,'TANYA NITIN MOTWANI','S23'),
+    (70,'NlNGU DIVIJ KAMLESH','S23'),
+    (71,'PANCHAL DHRUV SURESH','S23'),
+    (72,'PUNWANI YASH CHANDERKANT','S23'),
+    (73,'TIWARI SWATI SANTOSH KUMAR','S23');
+
+/// yrh sab mere tables hai  in maise labs21_mpl to s23 tak mere page ke liye use hoga and students aur attendance nhi karenge toh bhi chalega and users for log in 
+
+
+| attendance      |
+| labs21_mpl      |
+| labs21_nl       |
+| labs21_py       |
+| labs21_unix     |
+| labs22_mpl      |
+| labs22_nl       |
+| labs22_py       |
+| labs22_unix     |
+| labs23_mpl      |
+| labs23_nl       |
+| labs23_py       |
+| labs23_unix     |
+| lect_s2am       |
+| lect_s2at       |
+| lect_s2cn       |
+| lect_s2coa      |
+| lect_s2os       |
+| s2              |
+| s21             |
+| s22             |
+| s23             |
+| students        |
+| users
+
+/// same code for 22 and 21
+create table s23 as
+select Roll_no from s2;
+
+alter table s23 add primary key(Roll_no);
+
+
+///for labs and lects vale tables
+
+create table labs21_py as
+select Roll_no from s2;
+
+alter table labs21_py add primary key(Roll_no);
+
+
+create table lect_s2am as
+select Roll_no from s2;
+
+alter table lect_s2am add primary key(Roll_no);
+
+
